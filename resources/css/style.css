@@ -1,0 +1,636 @@
+/* Universal Styles */
+
+html {
+  font-family: 'Roboto', sans-serif;;
+  font-size: 16px;
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem;/* To offset for fixed header. */
+  width: 100%; 
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+/* Tablet Screen Size */
+
+@media only screen and (max-width: 848px) {
+  .main-content {
+    top: 4.25rem;
+  }
+
+}
+/* Mobile Screen size 591px
+narrower the header starts breaking, so I decided 
+to make the mobile media querie to start
+at 591
+ */
+@media only screen and (max-width:591px) {
+  .main-content{
+    top: 3rem;
+  }
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 5.3125rem;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 5;
+  max-width: 100%;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100%;
+  max-width: 100%;
+}
+
+header .logo {
+  flex: 1;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5em;
+}
+
+nav a {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+header .icon {
+  width: 1rem;
+  padding-left: .75rem;
+  vertical-align: middle;
+}
+/* AC: Desaparece la clae mobile y tabletcuando está en tamaño de 
+de escritorio */
+header .mobile {
+  display: none;
+}
+
+header .tablet {
+  display: none;
+}
+
+/* Tablet size 848px*/
+@media only screen and (max-width: 848px) {
+ /* Desaparece el header del escritorio cuando la pantalla
+  crece a 848px  */
+
+  header .desktop {
+    display: none;
+  }
+
+  header {
+    height: 4.25rem;
+  }
+  
+  header .content{
+    padding: 0 0.5rem 0 1rem;
+    justify-content: center;
+  }
+
+
+  header .tablet {
+    display: flex;
+  }
+
+  header .logo{ 
+    padding-left: 1.875rem;
+    justify-self: flex-start;
+  }
+
+  header .tablet nav {
+    height: 100%;
+  }
+
+  header .tablet ul{
+    justify-self: flex-end;
+    align-items: center;
+  }
+
+  header .tablet li{
+    padding: 0 .6rem;
+  }
+  
+  header .tablet .button {
+    display: flex;
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+
+/* 
+Mobile size 591px, header starts breaking smaller than this size*/
+@media only screen and (max-width:591px) {
+  
+  
+  header .desktop {
+    display: none;
+  }
+
+
+  header .tablet {
+    display: none;
+  }
+  
+  header {
+    height: 3rem;
+    max-width: 100%;
+  }
+
+
+
+  header .mobile {
+    display: flex;
+    width: 100%;
+  }
+
+
+  
+  header .content {
+    padding: 0;
+    align-items: center;
+  }
+
+  .mobile img {
+    vertical-align: middle;
+  }
+
+  nav .mobile{
+    align-items: center;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  header .mobile li {
+    padding: 0;
+  }
+
+  header .mobile .button {
+    display: flex;
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+/* Sign Up Section */
+
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+  background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+#sign-up-cta {
+  display: flex;
+  position:relative;
+  top:170px; left:10%;
+  padding: 0 5rem 2.5rem 5rem;
+  border: solid 1px #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+}
+
+#sign-up-cta .content {
+  width: 100%;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
+}
+
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+}
+
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+}
+
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  padding-bottom: .75rem;
+}
+
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.25rem 7.25rem;
+
+}
+
+@media only screen and (max-width: 848px) {
+  #sign-up-section {
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+    
+  }
+
+  #sign-up-cta { 
+   position: static; 
+   width: auto; 
+   height: auto; 
+   background-color: transparent;
+   border: none;
+   }
+
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  #sign-up-section {
+    height: 20rem;
+    width: 100%;
+    background-position: right;
+
+  }
+
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+
+  #sign-up-cta .content{
+    width: 100%;
+  }
+}
+
+/* Features Section */
+
+#features-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 5% 2.875rem;
+  background-color: #f3f3f3;
+  gap: 1rem;
+}
+
+.feature {
+  flex: 1;
+  padding: 2rem;
+  margin: 0px ;
+  background-color: white;
+}
+
+.feature .image-container {
+  justify-content: stretch;
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.feature h2 {
+  padding-bottom: .5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+ /* Tqblet Size 848px */
+ @media only screen and (max-width: 848px) {
+  
+  #features-section {
+    padding-top: 1rem;
+    justify-content: space-around;
+    gap:2rem;
+  }
+
+  .feature {
+    padding: 4%;
+    
+    }
+
+  .feature .center{
+    width: 100%;
+  }
+  
+  .feature .image-container {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 16rem;
+  }
+
+  .feature .image-container img{
+    object-fit: cover;
+    max-width: none;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    object-position: center;
+   }
+  
+  .feature h2 {
+    font-size: 1.525rem;
+    line-height: 1.5;
+    font-weight: bolder;
+    text-align: start;
+  }
+
+  .feature h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  #features-section {
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
+    gap: 0;
+  }
+
+  .feature {
+    margin: 0;
+    padding: 1.25rem 1rem 0 1rem;
+  }
+  .feature h3 {
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 5%;
+    font-size: .875;
+  }
+  .feature h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.125rem;
+  }
+
+  .feature .image-container img{
+    object-position: center;
+  }
+}
+
+/* Filters Section */
+
+#filters-section {
+  padding: 2.875rem 0;
+  background-color: #4a4a4a;
+  margin: 0;
+}
+
+#filters-section .content {
+  display: flex;
+  padding: 0 .625rem;
+  margin-bottom: 4rem;
+  align-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+#filters-section .content h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+}
+
+#filters-section .content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: white;
+  width: 38rem;
+}
+
+#filters-section .images-container {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 0 1%;
+
+}
+/* Tablet Size 848px */
+@media only screen and (max-width: 848px) {
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 1rem;
+    padding: 2.2rem 1rem 2rem;
+  }
+
+  #filters-section .content h2 {
+    padding-bottom: .25rem;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: bolder;
+  }
+
+  #filters-section .content h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+}
+  /* Mobile size 591px */
+
+@media only screen and (max-width:591px) {
+
+  #filters-section .extra {
+    display: none;
+  }
+  
+  #filters-section .content h2{
+    font-weight:normal;
+  }
+
+  #filters-section .content {
+    padding: 2rem;
+  };
+}
+
+
+
+/* Quotes Section */
+
+#quotes-section {
+  display: flex;
+  background-color: #f3f3f3;
+  padding: 80px;
+}
+
+#quotes-section .content {
+  display: flex;
+  padding: 0;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+#quotes-section .quote {
+  
+  padding-right: 1.875rem;
+  font-family: "Palatino", serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+#quotes-section .quote-citation {
+  display: block;
+  height: 1.875rem;
+  margin: auto;
+  
+}
+
+/* Tablet Size 848px */
+@media only screen and (max-width: 848px) {
+  
+  #quotes-section {
+    padding: 0rem;
+  }
+
+  #quotes-section .content {
+    padding: 1.875rem 1.5rem;
+    
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  #quotes-section .quote-citation {
+    display: block;
+    padding-top: 1rem;
+    margin: auto;
+  }
+}
+
+/* Mobile size 591px*/
+
+@media only screen and (max-width:591px) {
+
+  #quotes-section .content {
+    flex-direction: column;
+  }
+#quotes-section .quote{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+}
+
+/* Footer */
+
+footer {
+  background-color: #9b9b9b;
+  padding: 0 2rem;
+  height: 3.875rem;
+}
+
+footer .content {
+  color: white;
+  display: flex;
+  font-size: .75rem;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 848px) {
+  footer .content {
+    font-size: .625rem;
+  }
+}
